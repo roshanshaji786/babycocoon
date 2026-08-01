@@ -59,10 +59,13 @@ export function handleStaticFetch(
 ): Promise<Response> | undefined {
   const url =
     typeof input === "string"
-      ? new URL(input, window.location.origin)
+      ? new URL(
+          input,
+          typeof window !== "undefined" ? window.location.origin : "http://localhost"
+        )
       : input instanceof URL
       ? input
-      : new URL(input.url, window.location.origin);
+      : new URL(input.url, "http://localhost");
 
   const path = url.pathname;
   const method = init?.method ?? "GET";
