@@ -15,6 +15,22 @@ Next.js 16, Tailwind CSS v4, Drizzle ORM and PostgreSQL.
 - 💳 Checkout flow with order submission (COD / UPI / Card)
 - 📱 Fully responsive, mobile-first design
 
+## 🌐 Live demo (GitHub Pages)
+
+A self-contained static export of the storefront (seeded catalogue served
+client-side, orders simulated) lives in `docs/` on the
+`arena/019fbc49-babycocoon` branch. To go live:
+
+1. Repo **Settings → Pages**
+2. **Source:** *Deploy from a branch*
+3. **Branch:** `arena/019fbc49-babycocoon`, folder: `/docs` → **Save**
+
+The site then appears at:
+`https://roshanshaji786.github.io/babycocoon/`
+
+(To rebuild the static bundle locally:
+`STATIC_EXPORT=1 NEXT_PUBLIC_STATIC=1 npm run build` — output lands in `out/`.)
+
 ## 🚀 Quick start (local)
 
 ```bash
@@ -42,33 +58,16 @@ Open [http://localhost:3000](http://localhost:3000).
    connection string.
 2. Import this repo into [Vercel](https://vercel.com) — framework preset:
    **Next.js**.
-3. Add the environment variable `DATABASE_URL` (in Vercel project settings).
-4. In the Vercel build, tables are created automatically via
-   `postinstall`/build hooks **or** run locally:
+3. Add the environment variable `DATABASE_URL` (Vercel project settings).
+4. Run migrations + seed once (from your machine, with `DATABASE_URL` set):
    ```bash
-   npm run db:push   # with DATABASE_URL set
+   npm run db:push
    npm run seed
    ```
-5. The repo also includes `.github/workflows/vercel.yml` for automatic
-   deploys — add `VERCEL_TOKEN`, `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`
-   as repository secrets to enable it.
-
-## 🖼️ Static demo (GitHub Pages)
-
-The repo ships a self-contained static export of the storefront (seeded
-catalogue served client-side, orders simulated) deployed automatically by
-`.github/workflows/pages.yml` to:
-
-```
-https://roshanshaji786.github.io/babycocoon/
-```
-
-To build the static version locally:
-
-```bash
-STATIC_EXPORT=1 NEXT_PUBLIC_STATIC=1 npm run build
-# output in ./out
-```
+5. Optional: for automatic deploys from GitHub Actions, add
+   `.github/workflows/vercel.yml` (see the template in this repo's working
+   copy) plus the `VERCEL_TOKEN`, `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`
+   repository secrets.
 
 ## 🗂️ Project structure
 
