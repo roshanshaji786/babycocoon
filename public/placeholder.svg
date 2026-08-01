@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8E8EE"/>
+      <stop offset="100%" stop-color="#E8F4FD"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="260" r="90" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="300" cy="260" r="55" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M120 460 q60 -120 120 -60 q60 60 120 0 q60 -60 120 60" stroke="#E91E8C" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <text x="300" y="520" text-anchor="middle" font-family="sans-serif" font-size="26" fill="#C2185B" font-weight="600">Baby Cocoon</text>
+</svg>
