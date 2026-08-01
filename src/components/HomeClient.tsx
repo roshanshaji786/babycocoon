@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Truck, Shield, Headphones, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "./ProductCard";
+import { withAssetBase } from "@/lib/asset-base";
 
 interface Product {
   id: number;
@@ -251,7 +252,7 @@ export default function HomeClient() {
                   className="group relative overflow-hidden rounded-2xl aspect-square"
                 >
                   <img
-                    src={cat.image || ""}
+                    src={withAssetBase(cat.image || "")}
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
@@ -408,7 +409,7 @@ export default function HomeClient() {
                   className="group relative overflow-hidden rounded-2xl aspect-square"
                 >
                   <img
-                    src={cat.image || ""}
+                    src={withAssetBase(cat.image || "")}
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"

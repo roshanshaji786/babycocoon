@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ShoppingCart, Star, Eye } from "lucide-react";
 import { useCartStore } from "@/store/cart";
+import { withAssetBase } from "@/lib/asset-base";
 
 interface ProductCardProps {
   id: number;
@@ -40,7 +41,7 @@ export default function ProductCard({
       {/* Image */}
       <Link href={`/product/${slug}`} className="block relative overflow-hidden aspect-square">
         <img
-          src={images[0] || "/placeholder.svg"}
+          src={withAssetBase(images[0] || "/placeholder.svg")}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           loading="lazy"
@@ -117,7 +118,7 @@ export default function ProductCard({
               name,
               price,
               compareAtPrice,
-              image: images[0] || "",
+              image: withAssetBase(images[0] || ""),
               slug,
             })
           }

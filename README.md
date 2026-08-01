@@ -63,11 +63,12 @@ catalogue served client-side, orders simulated) deployed automatically by
 https://roshanshaji786.github.io/babycocoon/
 ```
 
-To build the static version locally:
+To rebuild the static version locally, run the build and copy the output
+into `docs/`:
 
 ```bash
 STATIC_EXPORT=1 NEXT_PUBLIC_STATIC=1 npm run build
-# output in ./out
+rm -rf docs && cp -a out docs
 ```
 
 ## 🗂️ Project structure
