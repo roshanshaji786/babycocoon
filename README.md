@@ -18,18 +18,19 @@ Next.js 16, Tailwind CSS v4, Drizzle ORM and PostgreSQL.
 ## 🌐 Live demo (GitHub Pages)
 
 A self-contained static export of the storefront (seeded catalogue served
-client-side, orders simulated) lives in `docs/` on the
-`arena/019fbc49-babycocoon` branch. To go live:
+client-side, orders simulated) is checked into `docs/`. Configure GitHub Pages
+to deploy the `main` branch from `/docs` to:
 
-1. Repo **Settings → Pages**
-2. **Source:** *Deploy from a branch*
-3. **Branch:** `arena/019fbc49-babycocoon`, folder: `/docs` → **Save**
+```
+https://roshanshaji786.github.io/babycocoon/
+```
 
-The site then appears at:
-`https://roshanshaji786.github.io/babycocoon/`
+To rebuild the static version locally:
 
-(To rebuild the static bundle locally:
-`STATIC_EXPORT=1 NEXT_PUBLIC_STATIC=1 npm run build` — output lands in `out/`.)
+```bash
+STATIC_EXPORT=1 NEXT_PUBLIC_STATIC=1 npm run build
+rm -rf docs && cp -a out docs
+```
 
 ## 🚀 Quick start (local)
 

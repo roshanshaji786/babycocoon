@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useCartStore, getCartSubtotal } from "@/store/cart";
+import { withAssetBase } from "@/lib/asset-base";
 import { ChevronRight, Lock, Truck, Check, ShoppingBag } from "lucide-react";
 
 const indianStates = [
@@ -512,7 +513,7 @@ export default function CheckoutClient() {
                   <div key={item.id} className="flex gap-3">
                     <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-50 shrink-0">
                       <img
-                        src={item.image}
+                        src={withAssetBase(item.image)}
                         alt={item.name}
                         className="w-full h-full object-cover"
                       />

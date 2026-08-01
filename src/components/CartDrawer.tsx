@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X, Plus, Minus, Trash2, ShoppingBag } from "lucide-react";
 import { useCartStore, getCartSubtotal } from "@/store/cart";
+import { withAssetBase } from "@/lib/asset-base";
 
 export default function CartDrawer() {
   const items = useCartStore((s) => s.items);
@@ -116,7 +117,7 @@ export default function CartDrawer() {
                     className="w-20 h-20 rounded-lg overflow-hidden bg-white shrink-0"
                   >
                     <img
-                      src={item.image}
+                      src={withAssetBase(item.image)}
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />

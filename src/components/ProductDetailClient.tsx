@@ -16,6 +16,7 @@ import {
   Plus,
 } from "lucide-react";
 import { useCartStore } from "@/store/cart";
+import { withAssetBase } from "@/lib/asset-base";
 import ProductCard from "./ProductCard";
 
 interface ProductDetail {
@@ -135,7 +136,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         name: product.name,
         price,
         compareAtPrice,
-        image: images[0] || "",
+        image: withAssetBase(images[0] || ""),
         slug: product.slug,
       });
     }
@@ -181,7 +182,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           <div className="space-y-4">
             <div className="relative aspect-square rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100">
               <img
-                src={images[selectedImage] || "/placeholder.svg"}
+                src={withAssetBase(images[selectedImage] || "/placeholder.svg")}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
@@ -209,7 +210,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     }`}
                   >
                     <img
-                      src={img}
+                      src={withAssetBase(img)}
                       alt={`${product.name} ${i + 1}`}
                       className="w-full h-full object-cover"
                     />
