@@ -1,0 +1,191 @@
+# 📏 Baby Cocoon — Size Guide Page (fix for "Find Your Baby's Fit" button)
+
+## 🔍 Diagnosis (confirmed)
+- Your hero button **"Find Your Baby's Fit"** links to **`/pages/size-guide`**
+- That page **does not exist** → Shopify shows **404 "Oops! That page can't be found"**
+- Your store currently has only 2 pages: `/pages/contact` and `/pages/shop`
+
+## ✅ The fix (2 steps, ~5 minutes)
+
+### Step 1 — Create the page
+1. Shopify Admin → **Online Store → Pages → Add page**
+2. **Title:** `Size Guide`
+3. **Content:** click **Show HTML** (top-right of the content box) → paste the HTML below → click **Hide HTML** (optional)
+4. Under **Search engine listing** → Edit → set **Page title:** `Baby Size Guide | Baby Cocoon India` and **Meta description:** `Find the right fit for swaddles, jablas, hooded towels and carry beds. Simple age-weight-size charts for Indian babies.`
+5. **Save**
+
+> ✅ When you save with title "Size Guide", Shopify auto-creates the handle `/pages/size-guide` — so your hero button will start working immediately. (If you named it differently, the handle changes — then either rename to match, or update the button link.)
+
+### Step 2 — Verify
+- Open `https://babycocoon.co.in/pages/size-guide` → should show the new page, not 404.
+- Then add it to your footer **Help** menu too: Admin → **Navigation → Footer menu → Add menu item** → `Size Guide` → `/pages/size-guide`.
+
+> 💡 Also worth doing later: link the existing "Size Guide" accordion on your product pages to this page.
+
+---
+
+## 📋 Page HTML — paste this (content box → Show HTML)
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap" rel="stylesheet">
+<style>
+  .sg{font-family:'Nunito Sans',sans-serif;color:#3B332C;background:#FDF9F4;max-width:920px;margin:0 auto;padding:32px 20px 56px}
+  .sg h1,.sg h2{font-family:'Fraunces',serif;color:#3B332C;line-height:1.15}
+  .sg h1{font-size:38px;margin:0 0 8px}
+  .sg h1 em{font-style:italic;color:#2E5E4E}
+  .sg .lead{font-size:17px;color:#7A6E63;margin:0 0 22px}
+  .sg-eyebrow{font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#D97B5C;margin:0 0 10px}
+  .sg-chips{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 34px}
+  .sg-chip{background:#F4ECE3;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:800;color:#2E5E4E}
+  .sg-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 40px}
+  .sg-step{background:#fff;border-radius:14px;box-shadow:0 4px 14px rgba(59,51,44,.07);padding:20px}
+  .sg-step .n{font-family:'Fraunces',serif;font-size:26px;color:#D97B5C;font-weight:600;line-height:1}
+  .sg-step h3{font-size:15.5px;margin:8px 0 6px;color:#3B332C}
+  .sg-step p{font-size:13.5px;color:#7A6E63;margin:0;line-height:1.55}
+  .sg-block{background:#fff;border-radius:18px;box-shadow:0 4px 16px rgba(59,51,44,.07);padding:28px;margin-bottom:22px}
+  .sg-block h2{font-size:25px;margin:0 0 4px}
+  .sg-block .sub{font-size:14.5px;color:#7A6E63;margin:0 0 18px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th{background:#2E5E4E;color:#fff;text-align:left;padding:11px 12px;font-size:13px;letter-spacing:.3px;text-transform:uppercase}
+  td{padding:11px 12px;border-bottom:1px solid #F4ECE3}
+  tr:nth-child(even) td{background:#FDF9F4}
+  .sg-note{background:#F3DCD2;border-left:4px solid #D97B5C;border-radius:8px;padding:12px 16px;font-size:14px;margin:16px 0 0}
+  .sg-tip{background:#EAF2EE;border-left:4px solid #2E5E4E;border-radius:8px;padding:12px 16px;font-size:14px;margin:16px 0 0}
+  .sg-cta{text-align:center;margin:36px 0 0}
+  .sg-btn{display:inline-block;background:#2E5E4E;color:#fff;font-weight:800;font-size:16px;padding:14px 30px;border-radius:999px;text-decoration:none;margin:4px}
+  .sg-btn.alt{background:#D97B5C}
+  .sg-copy{font-size:12.5px;color:#7A6E63;margin-top:14px}
+  @media(max-width:640px){
+    .sg-steps{grid-template-columns:1fr}
+    .sg h1{font-size:30px}
+    .sg-block{padding:20px}
+  }
+</style>
+
+<div class="sg">
+  <p class="sg-eyebrow">Size Guide</p>
+  <h1>Find your baby's <em>perfect fit</em>.</h1>
+  <p class="lead">Simple age, weight and size charts for every Baby Cocoon product — made for Indian babies and Indian weather. When in doubt, size up: babies grow fast!</p>
+
+  <div class="sg-chips">
+    <span class="sg-chip">🇮🇳 Made in India</span>
+    <span class="sg-chip">🔄 45-day returns</span>
+    <span class="sg-chip">💵 COD available</span>
+    <span class="sg-chip">🚚 Free shipping over ₹499</span>
+  </div>
+
+  <h2 style="font-size:26px;margin:0 0 16px">How to measure your baby</h2>
+  <div class="sg-steps">
+    <div class="sg-step">
+      <div class="n">1</div>
+      <h3>Length / height</h3>
+      <p>Lay your baby flat on a mat, hold a soft tape from head to heel. Round up to the nearest cm.</p>
+    </div>
+    <div class="sg-step">
+      <div class="n">2</div>
+      <h3>Weight</h3>
+      <p>Weigh after a feed, before a nappy change, for the most accurate number.</p>
+    </div>
+    <div class="sg-step">
+      <div class="n">3</div>
+      <h3>Pick by age + weight</h3>
+      <p>Use the chart below. If your baby is between sizes, choose the larger size for comfort.</p>
+    </div>
+  </div>
+
+  <div class="sg-block">
+    <h2>👕 Jablas &amp; Clothing</h2>
+    <p class="sub">Front-open jablas, onesies &amp; bodysuits — sized for Indian babies</p>
+    <table>
+      <tr><th>Size</th><th>Age</th><th>Weight</th><th>Length</th></tr>
+      <tr><td><b>XS</b></td><td>0–3 months</td><td>3–6 kg</td><td>56–62 cm</td></tr>
+      <tr><td><b>S</b></td><td>3–6 months</td><td>6–8 kg</td><td>62–68 cm</td></tr>
+      <tr><td><b>M</b></td><td>6–12 months</td><td>8–10 kg</td><td>68–76 cm</td></tr>
+      <tr><td><b>L</b></td><td>12–18 months</td><td>10–12 kg</td><td>76–84 cm</td></tr>
+    </table>
+    <div class="sg-tip">💡 Newborns grow ~1–1.5 kg per month. For gift sets, size up — the baby will grow into it.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🍼 Swaddles &amp; Wraps</h2>
+    <p class="sub">One size fits most — check the dimensions on your product page</p>
+    <table>
+      <tr><th>Product</th><th>Dimensions</th><th>Fits</th></tr>
+      <tr><td><b>Muslin Swaddle</b> (single)</td><td>100 × 100 cm</td><td>0–6 months</td></tr>
+      <tr><td><b>Swaddle</b> (double layer)</td><td>100 × 100 cm</td><td>0–6 months</td></tr>
+      <tr><td><b>Baby Wrap</b></td><td>Fits 0–12 months</td><td>Adjustable wrap</td></tr>
+    </table>
+    <div class="sg-note">⚠️ Check each swaddle's exact size on its product page — sizes may vary between batches.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🛁 Hooded Towels</h2>
+    <p class="sub">Bath-time must-haves — generous sizes with a soft hood</p>
+    <table>
+      <tr><th>Product</th><th>Dimensions</th><th>Fits</th></tr>
+      <tr><td><b>Hooded Towel</b></td><td>75 × 75 cm approx.</td><td>0–12 months</td></tr>
+      <tr><td><b>Hooded Towel</b> (double layer)</td><td>75 × 75 cm approx.</td><td>0–12 months</td></tr>
+    </table>
+  </div>
+
+  <div class="sg-block">
+    <h2>🛏️ Bedding, Cradles &amp; Carry Beds</h2>
+    <p class="sub">Sleep-safe essentials — measure your space before you buy</p>
+    <table>
+      <tr><th>Product</th><th>Use</th><th>Note</th></tr>
+      <tr><td><b>Carry Bed</b></td><td>Portable day sleeps, travel</td><td>Check length vs. your baby's height</td></tr>
+      <tr><td><b>Cradle Set</b></td><td>Day + night sleeps with rocking motion</td><td>Fits standard nursery spaces</td></tr>
+      <tr><td><b>Net Bed</b></td><td>Bug-safe outdoor/indoor sleeps</td><td>Check dimensions on product page</td></tr>
+      <tr><td><b>Bedding Combo</b></td><td>Complete sleep setup</td><td>Includes fitted pieces — see product list</td></tr>
+    </table>
+    <div class="sg-tip">📏 Measure your cot, bassinet or floor space before ordering a cradle or carry bed — each product page lists exact dimensions.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🤱 Feeding Pillows</h2>
+    <p class="sub">Comfort for mamma and baby during every feed</p>
+    <table>
+      <tr><th>Use</th><th>Fits</th></tr>
+      <tr><td>Breastfeeding &amp; bottle support</td><td>Babies 0–12 months</td></tr>
+      <tr><td>Tummy-time support</td><td>From birth</td></tr>
+    </table>
+  </div>
+
+  <div class="sg-block">
+    <h2>🧺 Care for your Baby Cocoon pieces</h2>
+    <p class="sub">Soft fabrics stay soft — follow these 3 rules</p>
+    <table>
+      <tr><th>Fabrics</th><th>Care</th></tr>
+      <tr><td>Muslin &amp; cotton</td><td>Cold machine wash, mild detergent, line dry</td></tr>
+      <tr><td>Wraps &amp; swaddles</td><td>Wash before first use — gets softer every wash</td></tr>
+      <tr><td>Beds &amp; cradles</td><td>Wipe clean with a damp cloth; wash linens separately</td></tr>
+    </table>
+    <div class="sg-note">🚫 Avoid fabric softeners and bleach — they coat the fibres and reduce breathability.</div>
+  </div>
+
+  <div class="sg-cta">
+    <a class="sg-btn" href="/collections/jablas-clothing">Shop Jablas &amp; Clothing</a>
+    <a class="sg-btn alt" href="/collections/swaddles-wrappers">Shop Swaddles &amp; Wraps</a>
+    <div class="sg-copy">Still unsure? WhatsApp us — we reply within a few hours (we're parents too). 💛</div>
+  </div>
+</div>
+```
+
+---
+
+## ⚠️ Before publishing — check these numbers
+The sizes above use **standard Indian baby-size ranges** plus your product info from the plan. Please confirm/update on your real products:
+- Swaddle dimensions (100×100 cm) — confirm with your production sheet
+- Hooded towel dimensions (75×75 cm approx.)
+- Carry bed / cradle / net bed **exact dimensions** — add them to the table + to each product page (this is also a conversion win: parents need dimensions before buying a bed)
+
+If any number is wrong, edit that table cell in the HTML before saving.
+
+---
+
+## 🛟 Alternative quick fix (if you don't want a full page yet)
+Change the hero button link from `/pages/size-guide` to something that exists right now:
+- `/collections/all` (Shop All) — instant fix, 10 seconds
+- `/pages/contact` (Contact) — if you'd rather they reach out
+
+But the Size Guide page is **strongly recommended**: it's a top-10 search term ("baby size guide India"), reduces return rates, and answers the #1 pre-purchase question — it converts. Do both if possible: create the page now, and keep the button pointing at it.
