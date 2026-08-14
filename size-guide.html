@@ -1,0 +1,169 @@
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap" rel="stylesheet">
+<style>
+  .sg{font-family:'Nunito Sans',sans-serif;color:#3E2723;background:#FFFDF7;max-width:920px;margin:0 auto;padding:24px 16px 56px}
+  .sg h1,.sg h2{font-family:'Fraunces',serif;color:#3E2723;line-height:1.15}
+  .sg h1{font-size:36px;margin:0 0 8px}
+  .sg h1 em{font-style:italic;background:linear-gradient(90deg,#E91E8C,#C2185B);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sg .lead{font-size:16.5px;color:#7A6A62;margin:0 0 20px;line-height:1.6}
+  .sg-eyebrow{font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#C2185B;margin:0 0 10px}
+  .sg-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}
+  .sg-chip{background:#F8E8EE;border-radius:999px;padding:7px 13px;font-size:13px;font-weight:800;color:#C2185B}
+  .sg-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 36px}
+  .sg-step{background:#fff;border-radius:14px;box-shadow:0 4px 14px rgba(62,39,35,.07);padding:18px 16px}
+  .sg-step .n{font-family:'Fraunces',serif;font-size:24px;color:#E91E8C;font-weight:600;line-height:1}
+  .sg-step h3{font-size:15px;margin:8px 0 6px;color:#3E2723}
+  .sg-step p{font-size:13.5px;color:#7A6A62;margin:0;line-height:1.55}
+  .sg-block{background:#fff;border-radius:18px;box-shadow:0 4px 16px rgba(62,39,35,.07);padding:24px;margin-bottom:18px}
+  .sg-block h2{font-size:24px;margin:0 0 4px}
+  .sg-block .sub{font-size:14px;color:#7A6A62;margin:0 0 16px}
+  .sg-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid #F8E8EE}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
+  th{background:linear-gradient(90deg,#E91E8C,#C2185B);color:#fff;text-align:left;padding:10px 12px;font-size:12.5px;letter-spacing:.3px;text-transform:uppercase;white-space:nowrap}
+  td{padding:10px 12px;border-bottom:1px solid #F8E8EE}
+  tr:nth-child(even) td{background:#FFFDF7}
+  .sg-swipe{display:none}
+  .sg-note{background:#FFF3E0;border-left:4px solid #FF6F00;border-radius:8px;padding:11px 14px;font-size:13.5px;margin:14px 0 0;line-height:1.5}
+  .sg-tip{background:#F8E8EE;border-left:4px solid #E91E8C;border-radius:8px;padding:11px 14px;font-size:13.5px;margin:14px 0 0;line-height:1.5}
+  .sg-cta{text-align:center;margin:32px 0 0}
+  .sg-btn{display:inline-block;background:linear-gradient(90deg,#E91E8C,#C2185B);color:#fff;font-weight:800;font-size:15.5px;padding:13px 26px;border-radius:999px;text-decoration:none;margin:4px 4px 0;box-shadow:0 5px 14px rgba(233,30,140,.25)}
+  .sg-btn.alt{background:linear-gradient(90deg,#FF6F00,#F4511E)}
+  .sg-copy{font-size:12.5px;color:#7A6A62;margin-top:14px}
+  @media(max-width:640px){
+    .sg{padding:20px 12px 48px}
+    .sg h1{font-size:28px}
+    .sg .lead{font-size:15px}
+    .sg-steps{grid-template-columns:1fr;gap:10px}
+    .sg-block{padding:18px 14px}
+    .sg-block h2{font-size:20px}
+    th,td{padding:9px 10px;font-size:13px}
+    .sg-swipe{display:block;font-size:12px;color:#7A6A62;text-align:right;margin:4px 0 0}
+    .sg-btn{display:block;width:100%;box-sizing:border-box;margin:8px 0 0}
+    .sg-copy{margin-top:16px}
+  }
+</style>
+
+<div class="sg">
+  <p class="sg-eyebrow">Size Guide</p>
+  <h1>Find your baby's <em>perfect fit</em>.</h1>
+  <p class="lead">Simple age, weight and size charts for every Baby Cocoon product — made for Indian babies and Indian weather. When in doubt, size up: babies grow fast!</p>
+
+  <div class="sg-chips">
+    <span class="sg-chip">🇮🇳 Made in India</span>
+    <span class="sg-chip">🔄 45-day returns</span>
+    <span class="sg-chip">💵 COD available</span>
+    <span class="sg-chip">🚚 Free shipping over ₹499</span>
+  </div>
+
+  <h2 style="font-size:24px;margin:0 0 14px">How to measure your baby</h2>
+  <div class="sg-steps">
+    <div class="sg-step">
+      <div class="n">1</div>
+      <h3>Length / height</h3>
+      <p>Lay your baby flat on a mat, hold a soft tape from head to heel. Round up to the nearest cm.</p>
+    </div>
+    <div class="sg-step">
+      <div class="n">2</div>
+      <h3>Weight</h3>
+      <p>Weigh after a feed, before a nappy change, for the most accurate number.</p>
+    </div>
+    <div class="sg-step">
+      <div class="n">3</div>
+      <h3>Pick by age + weight</h3>
+      <p>Use the chart below. If your baby is between sizes, choose the larger size for comfort.</p>
+    </div>
+  </div>
+
+  <div class="sg-block">
+    <h2>👕 Jablas &amp; Clothing</h2>
+    <p class="sub">Front-open jablas, onesies &amp; bodysuits — sized for Indian babies</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Size</th><th>Age</th><th>Weight</th><th>Length</th></tr>
+        <tr><td><b>XS</b></td><td>0–3 months</td><td>3–6 kg</td><td>56–62 cm</td></tr>
+        <tr><td><b>S</b></td><td>3–6 months</td><td>6–8 kg</td><td>62–68 cm</td></tr>
+        <tr><td><b>M</b></td><td>6–12 months</td><td>8–10 kg</td><td>68–76 cm</td></tr>
+        <tr><td><b>L</b></td><td>12–18 months</td><td>10–12 kg</td><td>76–84 cm</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+    <div class="sg-tip">💡 Newborns grow ~1–1.5 kg per month. For gift sets, size up — the baby will grow into it.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🍼 Swaddles &amp; Wraps</h2>
+    <p class="sub">One size fits most — check the dimensions on your product page</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Product</th><th>Dimensions</th><th>Fits</th></tr>
+        <tr><td><b>Muslin Swaddle</b> (single)</td><td>100 × 100 cm</td><td>0–6 months</td></tr>
+        <tr><td><b>Swaddle</b> (double layer)</td><td>100 × 100 cm</td><td>0–6 months</td></tr>
+        <tr><td><b>Baby Wrap</b></td><td>Fits 0–12 months</td><td>Adjustable wrap</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+    <div class="sg-note">⚠️ Check each swaddle's exact size on its product page — sizes may vary between batches.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🛁 Hooded Towels</h2>
+    <p class="sub">Bath-time must-haves — generous sizes with a soft hood</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Product</th><th>Dimensions</th><th>Fits</th></tr>
+        <tr><td><b>Hooded Towel</b></td><td>75 × 75 cm approx.</td><td>0–12 months</td></tr>
+        <tr><td><b>Hooded Towel</b> (double layer)</td><td>75 × 75 cm approx.</td><td>0–12 months</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+  </div>
+
+  <div class="sg-block">
+    <h2>🛏️ Bedding, Cradles &amp; Carry Beds</h2>
+    <p class="sub">Sleep-safe essentials — measure your space before you buy</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Product</th><th>Use</th><th>Note</th></tr>
+        <tr><td><b>Carry Bed</b></td><td>Portable day sleeps, travel</td><td>Check length vs. your baby's height</td></tr>
+        <tr><td><b>Cradle Set</b></td><td>Day + night sleeps with rocking motion</td><td>Fits standard nursery spaces</td></tr>
+        <tr><td><b>Net Bed</b></td><td>Bug-safe outdoor/indoor sleeps</td><td>Check dimensions on product page</td></tr>
+        <tr><td><b>Bedding Combo</b></td><td>Complete sleep setup</td><td>Includes fitted pieces — see product list</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+    <div class="sg-tip">📏 Measure your cot, bassinet or floor space before ordering a cradle or carry bed — each product page lists exact dimensions.</div>
+  </div>
+
+  <div class="sg-block">
+    <h2>🤱 Feeding Pillows</h2>
+    <p class="sub">Comfort for mamma and baby during every feed</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Use</th><th>Fits</th></tr>
+        <tr><td>Breastfeeding &amp; bottle support</td><td>Babies 0–12 months</td></tr>
+        <tr><td>Tummy-time support</td><td>From birth</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+  </div>
+
+  <div class="sg-block">
+    <h2>🧺 Care for your Baby Cocoon pieces</h2>
+    <p class="sub">Soft fabrics stay soft — follow these 3 rules</p>
+    <div class="sg-table-wrap">
+      <table>
+        <tr><th>Fabrics</th><th>Care</th></tr>
+        <tr><td>Muslin &amp; cotton</td><td>Cold machine wash, mild detergent, line dry</td></tr>
+        <tr><td>Wraps &amp; swaddles</td><td>Wash before first use — gets softer every wash</td></tr>
+        <tr><td>Beds &amp; cradles</td><td>Wipe clean with a damp cloth; wash linens separately</td></tr>
+      </table>
+    </div>
+    <p class="sg-swipe">👆 swipe table sideways on mobile</p>
+    <div class="sg-note">🚫 Avoid fabric softeners and bleach — they coat the fibres and reduce breathability.</div>
+  </div>
+
+  <div class="sg-cta">
+    <a class="sg-btn" href="/collections/jablas-clothing">Shop Jablas &amp; Clothing</a>
+    <a class="sg-btn alt" href="/collections/swaddles-wrappers">Shop Swaddles &amp; Wraps</a>
+    <div class="sg-copy">Still unsure? WhatsApp us — we reply within a few hours (we're parents too). 💛</div>
+  </div>
+</div>
